@@ -1,10 +1,10 @@
 "use client";
 import Modal from "./Modal";
 // import { useState } from "react";
-import useLoginModal from "@/app/hooks/useLoginModal";
+import useSignupModal from "@/app/hooks/useSignupModal";
 import CustomButton from "../forms/CustomButton";
-const LoginModal = () => {
-  const loginModal = useLoginModal();
+const SignupModal = () => {
+  const signupModal = useSignupModal();
   const content = (
     <>
       <form className="space-y-4">
@@ -21,18 +21,18 @@ const LoginModal = () => {
         <div className="p-5 bg-airbnb text-white rounded-xl opacity-85">
           Error Message
         </div>
-        <CustomButton label="Login" onClick={() => console.log("Clicked")} />
+        <CustomButton label="Sign Up" onClick={() => console.log("Clicked")} />
       </form>
     </>
   );
   return (
     <Modal
-      isOpen={loginModal.isOpen}
-      close={loginModal.close}
-      label="Login"
+      isOpen={signupModal.isOpen}
+      close={signupModal.close}
+      label="Sign Up"
       content={content}
     />
   );
 };
 
-export default LoginModal;
+export default SignupModal;
